@@ -1,0 +1,16 @@
+<div class="row">
+    <button class="btn btn-primary col-md-3"
+        (click)="onClickDisplayDetails()">
+        Display Details
+    </button>
+    <p class="col-md-3" *ngIf="isDisplayDetail">Secret Password = tuna</p>
+</div>
+
+<ul class="list-group">
+    <li class="list-group-item"
+        *ngFor="let log of clickLog; let i = index;"
+        [ngStyle]="onClickLogStyle(i)"
+        [ngClass]="onClickLogClass(i)">
+        {{ log }}
+    </li>
+</ul>

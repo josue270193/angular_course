@@ -1,0 +1,7 @@
+div {
+    padding: 10px;
+    margin: 10px;
+    background-color: lightgreen;
+    color: black;
+    border: 1em darkgreen solid;
+}

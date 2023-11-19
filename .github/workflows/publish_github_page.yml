@@ -13,7 +13,7 @@ jobs:
       - name: Install 🔧 
         run: |
           npm ci
-          npm run install
+          npm install
 
       - name: Deploy 🚀
         run: |

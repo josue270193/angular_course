@@ -96,7 +96,9 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "https://josue270193.github.io/angular_course/"
+            "baseHref": "https://josue270193.github.io/angular_course/",
+            "name": "Josue D.",
+            "email": "josue270193@gmail.com"
           }
         }
       }

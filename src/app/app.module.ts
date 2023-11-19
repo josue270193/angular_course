@@ -4,10 +4,15 @@ import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 
 import { AppComponent } from './app.component';
-import { BlockWarningComponent } from './block-warning/block-warning.component';
-import { BlockSuccessComponent } from './block-success/block-success.component';
-import { UsernameComponent } from './username/username.component';
-import { LogUserDetail } from './log-user-detail/log-user-detail.component';
+import { BlockWarningComponent, BlockSuccessComponent, UsernameComponent, LogUserDetail } from './previous-component/previous-component';
+
+import { HeaderComponent } from './header/header.component';
+import { RecipesComponent } from './recipes/recipes.component';
+import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
+import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
+import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
+import { ShoppingListComponent } from './shopping-list/shopping-list.component';
+import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +20,14 @@ import { LogUserDetail } from './log-user-detail/log-user-detail.component';
     BlockWarningComponent,
     BlockSuccessComponent,
     UsernameComponent,
-    LogUserDetail
+    LogUserDetail,
+    HeaderComponent,
+    RecipesComponent,
+    RecipeListComponent,
+    RecipeDetailComponent,
+    RecipeItemComponent,
+    ShoppingEditComponent,
+    ShoppingListComponent
   ],
   imports: [
     BrowserModule,

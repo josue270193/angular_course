@@ -1,4 +1,31 @@
-<block-warning />
-<block-success />
-<username-input />
-<log-user-detail />
+<div class="container" ngbAccordion>
+    <div class="row" ngbAccordionItem>
+        <h1 ngbAccordionHeader>
+            <button ngbAccordionButton>Previous component</button>
+        </h1>
+        <div ngbAccordionCollapse>
+            <div ngbAccordionBody>
+                <block-warning />
+                <block-success />
+                <username-input />
+                <log-user-detail />
+            </div>
+        </div>
+        
+    </div>
+    <div class="row" ngbAccordionItem [collapsed]="false">       
+        <h1 ngbAccordionHeader>
+            <button ngbAccordionButton>Shopping Component</button>
+        </h1>
+        <div ngbAccordionCollapse>
+            <div ngbAccordionBody>
+                <app-header />
+                <app-recipes />
+                <app-shopping-list />
+            </div>
+        </div>        
+    </div>
+</div>
+
+
+

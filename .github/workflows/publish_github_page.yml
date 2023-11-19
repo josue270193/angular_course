@@ -20,5 +20,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           npm ci 
-          npm run ng -- deploy --no-silent
+          npm run ng -- deploy --name="Josue D." --email="josue270193@gmail.com" --no-silent
 

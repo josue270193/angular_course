@@ -5,6 +5,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 
 import { AppComponent } from './app.component';
 import { BlockWarningComponent, BlockSuccessComponent, UsernameComponent, LogUserDetail } from './previous-component/previous-component';
+import { DatabindingComponent } from './previous-component/databinding/databinding.component';
+import { CockpitComponent } from './previous-component/databinding/cockpit/cockpit.component';
+import { ServerElementComponent } from './previous-component/databinding/server-element/server-element.component';
 
 import { HeaderComponent } from './header/header.component';
 import { RecipesComponent } from './recipes/recipes.component';
@@ -27,7 +30,10 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
     RecipeDetailComponent,
     RecipeItemComponent,
     ShoppingEditComponent,
-    ShoppingListComponent
+    ShoppingListComponent,
+    DatabindingComponent,
+    CockpitComponent,
+    ServerElementComponent
   ],
   imports: [
     BrowserModule,

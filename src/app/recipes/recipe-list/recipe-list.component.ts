@@ -13,9 +13,12 @@ export class RecipeListComponent {
     new Recipe("Spaghetti", "Recipe for spaghetti", "https://thefastrecipe.com/wp-content/uploads/2021/04/fried-spaghetti-4.jpg")
   ];
 
-
   constructor() {
     
+  }
+
+  onNewRecipe() {
+    console.log("4");
   }
 
 }

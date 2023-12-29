@@ -1,0 +1,8 @@
+<div class="row">
+    <div class="col-md-6 d-grid gap-2">
+        <button class="btn btn-success" (click)="onStart()" [disabled]="this.count > 0">Start</button>        
+    </div>
+    <div class="col-md-6 d-grid gap-2">
+        <button class="btn btn-danger" (click)="onStop()" [disabled]="this.count == 0">Stop</button>
+    </div>
+</div>

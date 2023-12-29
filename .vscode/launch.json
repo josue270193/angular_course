@@ -3,11 +3,11 @@
   "version": "0.2.0",
   "configurations": [        
     {      
-      "name": "ng serve Chrome",
+      "name": "ng serve Chrome (Fedora)",
       "type": "chrome",
       "request": "launch",      
-      "url": "http://localhost:4200",
-      "preLaunchTask": "npm: start",
+      "url": "http://localhost:4200",      
+      "preLaunchTask": "npm: start"
       // "webRoot": "${workspaceFolder}"  
     },
     {
@@ -17,7 +17,7 @@
       "reAttach": true,
       // "preLaunchTask": "npm: start",
       "url": "http://localhost:4200/",
-      "webRoot": "${workspaceFolder}"      
+      "webRoot": "${workspaceFolder}" 
     },
     {
       "name": "ng serve attach Firefox",

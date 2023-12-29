@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TimeTick } from './assignment/4/shared/time.model';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
+  numbers = [];
 
   constructor() {
 
@@ -16,5 +18,8 @@ export class AppComponent implements OnInit {
     
   }
 
+  onTick({time}: TimeTick) {    
+    this.numbers.push(time);
+  }
 
 }

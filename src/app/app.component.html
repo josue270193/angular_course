@@ -33,19 +33,20 @@
             </div>
         </div>    
     </div>
-    <div ngbAccordionItem [collapsed]="true">       
+    <div ngbAccordionItem [collapsed]="false">       
         <h1 ngbAccordionHeader>
             <button ngbAccordionButton>Shopping</button>
         </h1>
         <div ngbAccordionCollapse>
-            <div ngbAccordionBody>
-                <app-header />
-                <app-recipes />
-                <app-shopping-list />
+            <div ngbAccordionBody>       
+                <app-header (goToEvent)="showView($event)"/>         
+                <app-recipes *ngIf="displayView === 'recipes'; else elseBlock1" />
+                <ng-template #elseBlock1>1</ng-template>
+                <app-shopping-list *ngIf="displayView === 'shopping-list'; else elseBlock2"/>
+                <ng-template #elseBlock2>2</ng-template>
+                <div>3</div>
             </div>
+            <div>4</div>
         </div>        
     </div>
 </div>
-
-
-

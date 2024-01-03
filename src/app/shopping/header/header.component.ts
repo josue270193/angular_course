@@ -1,4 +1,5 @@
-import { Component } from "@angular/core";
+import { Component, EventEmitter, Output } from "@angular/core";
+import { RouteEvent } from "../shared/route-event.model";
 
 @Component({
     selector: 'app-header',
@@ -7,11 +8,24 @@ import { Component } from "@angular/core";
 })
 export class HeaderComponent {
 
+    @Output()
+    goToEvent = new EventEmitter<RouteEvent>();
+
     collapsed = true;
     dropdownCollapsed = false;
+
 
     constructor() {
 
     }
 
+    goToShoppingList() {
+        var event = new RouteEvent("shopping-list");
+        this.goToEvent.emit(event);
+    }
+
+    goToRecipes() {
+        var event = new RouteEvent("recipes");
+        this.goToEvent.emit(event);
+    }
 }

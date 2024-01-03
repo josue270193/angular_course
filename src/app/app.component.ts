@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TimeTick } from './assignment/4/shared/time.model';
+import { RouteEvent } from './shopping/shared/route-event.model';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,7 @@ import { TimeTick } from './assignment/4/shared/time.model';
 })
 export class AppComponent implements OnInit {
 
+  displayView = "recipes";
   numbers = [];
 
   constructor() {
@@ -20,6 +22,10 @@ export class AppComponent implements OnInit {
 
   onTick({time}: TimeTick) {    
     this.numbers.push(time);
+  }
+
+  showView(event: RouteEvent) {
+    this.displayView = event.show;
   }
 
 }

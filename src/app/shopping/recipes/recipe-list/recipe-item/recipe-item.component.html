@@ -1,1 +1,8 @@
-<p>recipe-item works!</p>
+<a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start"
+    aria-current="true" (click)="onClick()">
+    <div class="me-auto">
+        <div class="fw-bold">{{recipe.name}}</div>
+        {{recipe.description}}
+    </div>
+    <img [src]="recipe.imagePath" class="img-fluid" style="max-height: 50px;" [alt]="recipe.name">
+</a>

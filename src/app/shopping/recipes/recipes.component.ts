@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 import { Recipe } from './recipe.model';
 
 @Component({
@@ -8,8 +8,15 @@ import { Recipe } from './recipe.model';
 })
 export class RecipesComponent {
 
-  constructor() {
+  recipeSelected: Recipe;
 
+  constructor() {
+    
   }
+
+  onRecipeSelected(recipe: Recipe) {
+    this.recipeSelected = recipe;    
+  }
+    
 
 }

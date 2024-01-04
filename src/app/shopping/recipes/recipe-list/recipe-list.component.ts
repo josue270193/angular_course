@@ -21,10 +21,10 @@ export class RecipeListComponent {
   }
 
   onNewRecipe() {
-    console.log("onNewRecipe()");
+    
   }
 
-  onRecipeSelected(recipe: Recipe) {
+  onRecipeSelected(recipe: Recipe) {    
     this.recipeItemSelected.emit(recipe);
   }
 

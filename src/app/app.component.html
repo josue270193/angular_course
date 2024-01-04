@@ -4,7 +4,7 @@
             <button ngbAccordionButton>Previous component</button>
         </h1>
         <div ngbAccordionCollapse>
-            <div ngbAccordionBody>
+            <div>
                 <block-warning />
                 <block-success />
                 <username-input />
@@ -12,22 +12,18 @@
                 <app-databinding />
             </div>
         </div>    
-    </div>
-    <div ngbAccordionItem [collapsed]="true">
+    </div>    
+    <div ngbAccordionItem>
         <h1 ngbAccordionHeader>
             <button ngbAccordionButton>Assignment 4</button>
         </h1>
         <div ngbAccordionCollapse>
-            <div ngbAccordionBody>                
+            <div>                                
                 <app-game-control (onTick)="onTick($event)"/>
                 <ul class="list-group">
                     <li class="list-group-item" *ngFor="let number of numbers">
-                        <odd-number *ngIf="number % 2 != 0">
-                            {{number}}
-                        </odd-number> 
-                        <even-number *ngIf="number % 2 == 0"> 
-                            {{number}}
-                        </even-number>
+                        <odd-number *ngIf="number % 2 !== 0">{{number}}</odd-number>
+                        <even-number *ngIf="number % 2 === 0">{{number}}</even-number>
                     </li>                    
                 </ul>
             </div>
@@ -38,15 +34,13 @@
             <button ngbAccordionButton>Shopping</button>
         </h1>
         <div ngbAccordionCollapse>
-            <div ngbAccordionBody>       
+            <div>       
                 <app-header (goToEvent)="showView($event)"/>         
-                <app-recipes *ngIf="displayView === 'recipes'; else elseBlock1" />
-                <ng-template #elseBlock1>1</ng-template>
-                <app-shopping-list *ngIf="displayView === 'shopping-list'; else elseBlock2"/>
-                <ng-template #elseBlock2>2</ng-template>
-                <div>3</div>
+                <app-recipes *ngIf="displayView === 'recipes'" />                
+                <app-shopping-list *ngIf="displayView === 'shopping-list'"/>
             </div>
-            <div>4</div>
         </div>        
     </div>
 </div>
+
+

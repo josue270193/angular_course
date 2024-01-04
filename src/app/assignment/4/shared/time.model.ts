@@ -1,3 +1,3 @@
-export interface TimeTick {
+export interface TimerTick {
     time: number
 }

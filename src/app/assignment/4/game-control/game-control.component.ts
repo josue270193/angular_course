@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from "@angular/core";
-import { TimeTick } from "../shared/time.model";
+import { TimerTick } from "../shared/time.model";
 
 
 @Component({
@@ -11,7 +11,7 @@ export class GameControlComponent implements OnInit {
     private timerRef: any;
 
     @Output('onTick')
-    timerEvent = new EventEmitter<TimeTick>();    
+    timerEvent = new EventEmitter<TimerTick>();    
 
     count = 0;
 

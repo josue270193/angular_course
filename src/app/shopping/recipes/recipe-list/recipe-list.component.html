@@ -10,8 +10,8 @@
     <div class="col-sm-12">
         <div class="list-group">
             <app-recipe-item *ngFor="let item of recipes;index as i" 
-                [recipe]="item"
-                [recipeSelected]="onRecipeSelected(item)"
+                [recipe]="item" 
+                (recipeSelected)="onRecipeSelected(item)"
                 />               
         </div>
     </div>

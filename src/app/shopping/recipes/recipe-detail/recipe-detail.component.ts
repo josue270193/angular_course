@@ -17,7 +17,7 @@ export class RecipeDetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
-      console.log("Selected", this.recipe);
+      
   }
 
 }

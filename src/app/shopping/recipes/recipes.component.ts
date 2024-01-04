@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Recipe } from './recipe.model';
 
 @Component({
@@ -6,7 +6,7 @@ import { Recipe } from './recipe.model';
   templateUrl: './recipes.component.html',
   styleUrls: ['./recipes.component.css']
 })
-export class RecipesComponent {
+export class RecipesComponent implements OnInit {
 
   recipeSelected: Recipe;
 
@@ -14,8 +14,12 @@ export class RecipesComponent {
     
   }
 
-  onRecipeSelected(recipe: Recipe) {
-    this.recipeSelected = recipe;    
+  ngOnInit(): void {
+    
+  }
+
+  onRecipeSelected(recipe: Recipe) {    
+    this.recipeSelected = recipe
   }
     
 

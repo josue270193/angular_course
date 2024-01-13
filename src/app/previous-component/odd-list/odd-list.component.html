@@ -1,0 +1,19 @@
+<div class="row">
+    <button class="btn btn-primary col-md-3" (click)="onlyOdd = !onlyOdd">
+        Toogle Odds
+    </button>
+    <ul class="list-group">
+        <div *ngIf="onlyOdd">
+            <li class="list-group-item" *ngFor="let n of numberOdd">
+                {{ n }}
+            </li>
+        </div>
+        <div *ngIf="!onlyOdd">
+            <li class="list-group-item" *ngFor="let n of numberEven">
+                {{ n }}
+            </li>
+        </div>        
+    </ul>
+    <p appBasicHighlight>Style using basic-directive</p>
+    <p appBetterHighlight>Style using better-directive</p>
+</div>

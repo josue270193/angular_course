@@ -21,4 +21,12 @@ export class ShoppingListComponent implements OnInit {
     
   }
 
+  onAddIngredient(ingredient: Ingredient) {
+    this.ingredients.push(ingredient);
+  }
+
+  onDeleteIngredient() {
+    this.ingredients = this.ingredients.slice(0, -1);
+  }
+
 }

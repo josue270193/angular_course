@@ -21,6 +21,9 @@ import { RecipeDetailComponent } from './shopping/recipes/recipe-detail/recipe-d
 import { RecipeItemComponent } from './shopping/recipes/recipe-list/recipe-item/recipe-item.component';
 import { ShoppingListComponent } from './shopping/shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping/shopping-list/shopping-edit/shopping-edit.component';
+import { OddListComponent } from './previous-component/odd-list/odd-list.component';
+import { BasicHighlightDirective } from './previous-component/odd-list/basic-highlight/basic-hightight.directive';
+import { BetterHighlight } from './previous-component/odd-list/better-highlight/better-highlight.directive';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,8 @@ import { ShoppingEditComponent } from './shopping/shopping-list/shopping-edit/sh
     BlockWarningComponent, BlockSuccessComponent, UsernameComponent, LogUserDetail, HeaderComponent,    
     RecipesComponent, RecipeListComponent, RecipeDetailComponent, RecipeItemComponent, ShoppingEditComponent, ShoppingListComponent,     
     DatabindingComponent, CockpitComponent, ServerElementComponent,
-    GameControlComponent, EvenNumberComponent, OddNumberComponent
+    GameControlComponent, EvenNumberComponent, OddNumberComponent,
+    OddListComponent, BasicHighlightDirective, BetterHighlight
   ],
   imports: [
     BrowserModule,

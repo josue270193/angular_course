@@ -10,14 +10,11 @@
 </div>
 <div class="row">
     <div class="col-sm-12">
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" 
-                [attr.aria-expanded] = "!dropdownCollapsed"
-                [class.show]="dropdownCollapsed"
-                (click)="dropdownCollapsed = !dropdownCollapsed">
+        <div class="dropdown" style="display: inline-block;" appDropdown>
+            <button class="btn btn-secondary dropdown-toggle" type="button">
               Manage recipe
             </button>
-            <ul class="dropdown-menu" [class.show]="dropdownCollapsed">
+            <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">To shopping list</a></li>
               <li><a class="dropdown-item" href="#">Edit recipe</a></li>
               <li><a class="dropdown-item" href="#">Delete recipe</a></li>

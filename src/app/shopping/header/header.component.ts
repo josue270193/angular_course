@@ -12,7 +12,7 @@ export class HeaderComponent {
     goToEvent = new EventEmitter<RouteEvent>();
 
     collapsed = true;
-    dropdownCollapsed = false;
+    // dropdownCollapsed = false;
 
 
     constructor() {

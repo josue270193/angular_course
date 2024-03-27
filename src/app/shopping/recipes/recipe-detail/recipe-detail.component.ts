@@ -10,8 +10,6 @@ export class RecipeDetailComponent implements OnInit {
 
   @Input() recipe: Recipe;
 
-  dropdownCollapsed = false;
-
   constructor() {
 
   }

@@ -24,6 +24,9 @@ import { ShoppingEditComponent } from './shopping/shopping-list/shopping-edit/sh
 import { OddListComponent } from './previous-component/odd-list/odd-list.component';
 import { BasicHighlightDirective } from './previous-component/odd-list/basic-highlight/basic-hightight.directive';
 import { BetterHighlight } from './previous-component/odd-list/better-highlight/better-highlight.directive';
+import { UnlessDirective } from './previous-component/unless/unless.directive';
+import { DropdownDirective } from './shopping/shared/dropdown.directive';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +35,8 @@ import { BetterHighlight } from './previous-component/odd-list/better-highlight/
     RecipesComponent, RecipeListComponent, RecipeDetailComponent, RecipeItemComponent, ShoppingEditComponent, ShoppingListComponent,     
     DatabindingComponent, CockpitComponent, ServerElementComponent,
     GameControlComponent, EvenNumberComponent, OddNumberComponent,
-    OddListComponent, BasicHighlightDirective, BetterHighlight
+    OddListComponent, BasicHighlightDirective, BetterHighlight, UnlessDirective,  
+    DropdownDirective
   ],
   imports: [
     BrowserModule,

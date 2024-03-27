@@ -17,14 +17,11 @@
                 
             </ul>
             <ul class="navbar-nav">
-                <li class="nav-item dropdown">
-                    <button class="nav-link dropdown-toggle" type="button" 
-                        [attr.aria-expanded] = "!dropdownCollapsed"
-                        [class.show]="dropdownCollapsed"
-                        (click)="dropdownCollapsed = !dropdownCollapsed">
+                <li class="nav-item dropdown" appDropdown>
+                    <button class="nav-link dropdown-toggle" type="button">
                         Manage
                     </button>
-                    <ul class="dropdown-menu" [class.show]="dropdownCollapsed">                                        
+                    <ul class="dropdown-menu">                                        
                         <li>
                             <a href="#" class="dropdown-item">
                                 Save Data

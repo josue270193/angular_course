@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-xs-12">
+        <p>New Account</p>
+
+        <label>Account Name</label>        
+        <input type="text" class="form-control" #accountName />
+
+        <label>Account Status</label>        
+        <select class="form-select" #accountStatus>
+            <option value="active">Active</option>
+            <option value="inactive">Inactive</option>
+            <option value="hidden">Hidden</option>
+        </select>
+        
+    </div>
+    <div class="col-xs-12">
+        <button class="btn btn-primary" (click)="onClick(accountName.value, accountStatus.value)">
+            Add Account
+        </button>
+    </div>
+</div>

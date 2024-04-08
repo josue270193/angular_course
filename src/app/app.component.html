@@ -1,5 +1,5 @@
 <div class="container" ngbAccordion>
-    <div ngbAccordionItem>
+    <div ngbAccordionItem [collapsed]="false">
         <h1 ngbAccordionHeader>
             <button ngbAccordionButton>Previous component</button>
         </h1>
@@ -11,6 +11,7 @@
                 <log-user-detail />
                 <app-databinding />
                 <odd-list />
+                <app-accounts />
             </div>
         </div>    
     </div>    
@@ -30,7 +31,7 @@
             </div>
         </div>    
     </div>
-    <div ngbAccordionItem [collapsed]="false">       
+    <div ngbAccordionItem>
         <h1 ngbAccordionHeader>
             <button ngbAccordionButton>Shopping</button>
         </h1>

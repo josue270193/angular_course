@@ -1,0 +1,29 @@
+<div class="card">
+    <div class="card-header">
+        {{ account.name }}
+    </div>    
+    <div class="card-body">        
+        <p class="card-text">{{ account.status }}</p>
+
+        <div class="btn-group" role="group">
+            <input type="radio" class="btn-check" autocomplete="off" value="active"
+                #radioActiveStatus 
+                (change)="onStatusChanged($event)"
+            >
+            <label class="btn btn-outline-primary" #labelActiveStatus>Active</label>
+          
+            <input type="radio" class="btn-check" autocomplete="off" value="inactive"                
+                #radioInactiveStatus
+                (change)="onStatusChanged($event)"
+            >
+            <label class="btn btn-outline-primary" #labelInactiveStatus>Inactive</label>
+          
+            <input type="radio" class="btn-check" autocomplete="off" value="hidden"
+                #radioHiddenStatus
+                (change)="onStatusChanged($event)"
+            >
+            <label class="btn btn-outline-primary" #labelHiddenStatus>Hidden</label>
+        </div>
+    </div>    
+    
+</div>

@@ -10,7 +10,7 @@ export class DropdownDirective {
     @HostListener('document:click', ['$event']) onToggle(event: Event) {
         this.isOpen = this.elementRef.nativeElement.contains(event.target) ? !this.isOpen : false;
 
-        const element = this.elementRef.nativeElement.getElementsByClassName('dropdown-menu ')[0]; 
+        const element = this.elementRef.nativeElement.getElementsByClassName('dropdown-menu')[0]; 
         if (element) {
             if (this.isOpen) {  
                 this.renderer.addClass(element, 'show');

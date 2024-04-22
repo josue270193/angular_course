@@ -26,6 +26,8 @@ import { RecipeItemComponent } from './shopping/recipes/recipe-list/recipe-item/
 import { ShoppingListComponent } from './shopping/shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping/shopping-list/shopping-edit/shopping-edit.component';
 import { DropdownDirective } from './shopping/shared/dropdown.directive';
+import { CommonModule } from '@angular/common';
+import { ListUserComponent } from './assignment/5/list-user/list-user.component';
 
 
 @NgModule({
@@ -40,9 +42,11 @@ import { DropdownDirective } from './shopping/shared/dropdown.directive';
     AppNewAccount, AppDetailAccount, AppAccountsComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    ListUserComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

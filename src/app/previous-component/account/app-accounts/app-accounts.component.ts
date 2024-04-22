@@ -1,25 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AccountDto } from '../account.model';
+import { LoggingService } from 'src/app/shopping/shared/logging.service';
+import { AccountService } from '../shared/account.service';
 
 @Component({
-  selector: 'app-accounts',    
+  selector: 'app-accounts',
   templateUrl: './app-accounts.component.html',
   styleUrl: './app-accounts.component.css'
 })
-export class AppAccountsComponent {
+export class AppAccountsComponent implements OnInit {
 
   accounts = Array<AccountDto>();
 
-  constructor() {
+  constructor(private accountService: AccountService) {
 
   }
 
-  onAccountAdded(newAccount: AccountDto) {
-    this.accounts.push(newAccount);
-  }
-
-  onStatusChanged({id, status}) {
-    this.accounts[id].status = status;
+  ngOnInit(): void {
+    this.accounts = this.accountService.accounts;
   }
 
 }

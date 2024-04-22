@@ -1,5 +1,5 @@
 <div class="container" ngbAccordion>
-    <div ngbAccordionItem [collapsed]="false">
+    <div ngbAccordionItem [collapsed]="true">
         <h1 ngbAccordionHeader>
             <button ngbAccordionButton>Previous component</button>
         </h1>
@@ -17,19 +17,38 @@
     </div>    
     <div ngbAccordionItem>
         <h1 ngbAccordionHeader>
-            <button ngbAccordionButton>Assignment 4</button>
+            <button ngbAccordionButton>Assignments</button>
         </h1>
         <div ngbAccordionCollapse>
-            <div>                                
-                <app-game-control (onTick)="onTick($event)"/>
-                <ul class="list-group">
-                    <li class="list-group-item" *ngFor="let number of numbers">
-                        <odd-number *ngIf="number % 2 !== 0">{{number}}</odd-number>
-                        <even-number *ngIf="number % 2 === 0">{{number}}</even-number>
-                    </li>                    
-                </ul>
-            </div>
-        </div>    
+            <div class="container" ngbAccordion>
+                <div ngbAccordionItem>
+                    <h1 ngbAccordionHeader>
+                        <button ngbAccordionButton>Assignment 4</button>
+                    </h1>
+                    <div ngbAccordionCollapse>
+                        <div>                                
+                            <app-game-control (onTick)="onTick($event)"/>
+                            <ul class="list-group">
+                                <li class="list-group-item" *ngFor="let number of numbers">
+                                    <odd-number *ngIf="number % 2 !== 0">{{number}}</odd-number>
+                                    <even-number *ngIf="number % 2 === 0">{{number}}</even-number>
+                                </li>                    
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div ngbAccordionItem>
+                    <h1 ngbAccordionHeader>
+                        <button ngbAccordionButton>Assignment 5</button>
+                    </h1>
+                    <div ngbAccordionCollapse>
+                        <div>                                
+                            <list-user-app></list-user-app>
+                        </div>
+                    </div>
+                </div>   
+            </div>         
+        </div>
     </div>
     <div ngbAccordionItem>
         <h1 ngbAccordionHeader>

@@ -1,27 +1,23 @@
-import { Component, EventEmitter, OnInit, Output } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { AccountDto } from "../account.model";
+import { AccountService } from "../shared/account.service";
 
 @Component({
     selector: 'app-new-account',
     templateUrl: './app-new-account.component.html'
 })
-export class AppNewAccount implements OnInit {    
+export class AppNewAccount implements OnInit {
 
-    @Output() accountAdded = new EventEmitter<AccountDto>();
-
-    constructor() {
+    constructor(private accountService: AccountService) {
 
     }
 
     ngOnInit(): void {
-        
+
     }
 
     onClick(accountName: string, accountStatus: string) {
-        this.accountAdded.emit(
-            new AccountDto(accountName, accountStatus)
-        )
-        console.log("added new account: " + accountStatus);
+        this.accountService.addAccount(new AccountDto(accountName, accountStatus));
     }
 
 }

@@ -1,5 +1,6 @@
 import { Component, ElementRef, EventEmitter, Input, OnChanges, OnInit, Output, Renderer2, SimpleChanges, ViewChild } from "@angular/core";
 import { AccountDto } from "../account.model";
+import { AccountService } from "../shared/account.service";
 
 @Component({
     selector: 'app-detail-account',
@@ -9,7 +10,6 @@ export class AppDetailAccount implements OnInit, OnChanges {
 
     @Input() account: AccountDto;
     @Input() id: number;
-    @Output() statusChanged = new EventEmitter<{id: number, status: string}>();
 
     @ViewChild('radioActiveStatus', { static: true }) radioActiveStatus: ElementRef;
     @ViewChild('labelActiveStatus', { static: true }) labelActiveStatus: ElementRef;
@@ -18,7 +18,7 @@ export class AppDetailAccount implements OnInit, OnChanges {
     @ViewChild('radioHiddenStatus', { static: true }) radioHiddenStatus: ElementRef;
     @ViewChild('labelHiddenStatus', { static: true }) labelHiddenStatus: ElementRef;
 
-    constructor(render: Renderer2) {
+    constructor(private render: Renderer2, private accountService: AccountService) {
 
     }
 
@@ -26,7 +26,7 @@ export class AppDetailAccount implements OnInit, OnChanges {
 
     }
 
-    ngOnChanges(changes: SimpleChanges): void {        
+    ngOnChanges(changes: SimpleChanges): void {
         this.radioActiveStatus.nativeElement.name = "radio_" + this.id;
         this.radioActiveStatus.nativeElement.id = "radio_" + this.id + "_1";
         this.labelActiveStatus.nativeElement.htmlFor = "radio_" + this.id + "_1";
@@ -42,22 +42,21 @@ export class AppDetailAccount implements OnInit, OnChanges {
         switch (this.account.status) {
             case 'active':
                 this.radioActiveStatus.nativeElement.checked = "true";
-                break; 
+                break;
             case 'inactive':
                 this.radioInactiveStatus.nativeElement.checked = "true";
-                break; 
+                break;
             case 'hidden':
                 this.radioHiddenStatus.nativeElement.checked = "true";
-                break; 
+                break;
         }
     }
 
-    onStatusChanged(event) {                
-        this.statusChanged.emit({
+    onStatusChanged(event) {
+        this.accountService.changeStatus({
             id: this.id,
             status: event.target.value
-        })
-        console.log(`changed account ${this.id} status: ${event.target.value} `);
+        });
     }
 
 }

@@ -19,11 +19,13 @@ export class UserService {
     changeStatusActive(index: number) {
         let user = this.activeUsers.splice(index, 1)[0];
         this.inactiveUsers.push(user);
+        this.counterService.updateCountInactiveBy1();
     }
 
     changeStatusInactive(index: number) {
         let user = this.inactiveUsers.splice(index, 1)[0];
         this.activeUsers.push(user);
+        this.counterService.updateCountActiveBy1();
     }
 
 }

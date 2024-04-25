@@ -4,8 +4,7 @@
             <div class="row">
                 <div class="col-sm-5">
                     <div class="form-floating">
-                        <input type="text" class="form-control" id="name" placeholder="Ingredient's name" 
-                            #nameInput>
+                        <input type="text" class="form-control" id="name" placeholder="Ingredient's name" #nameInput>
                         <label for="name">Name</label>
                     </div>
                 </div>
@@ -18,22 +17,25 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-3">
-                    <button type="submit" class="btn btn-success d-inline-flex align-items-center"
-                        (click)="onAddItem()">
-                        Add
-                        <span class="ps-2 material-symbols-outlined">add</span>
-                    </button>
-                    <button type="button" class="btn btn-danger d-inline-flex align-items-center"
-                        (click)="onDeleteItem()">
-                        Delete
-                        <span class="ps-2 material-symbols-outlined">delete</span>
-                    </button>
-                    <button type="button" class="btn btn-primary d-inline-flex align-items-center"
-                        (click)="onClear()">
-                        Clear
-                        <span class="ps-2 material-symbols-outlined">clear_all</span>
-                    </button>
+                <div class="col-sm-6">
+                    <div class="btn-group" role="group" aria-label="Actions">
+                        <button type="button" class="btn btn-success d-inline-flex align-items-center"
+                            (click)="onAddItem()">
+                            Add
+                            <span class="ps-2 material-symbols-outlined">add</span>
+                        </button>
+
+                        <button type="button" class="btn btn-danger d-inline-flex align-items-center" 
+                            (click)="onDeleteItem()">
+                            Delete Last Inserted
+                            <span class="ps-2 material-symbols-outlined">delete</span>
+                        </button>
+                        <button type="button" class="btn btn-warning d-inline-flex align-items-center" 
+                            (click)="onClear()">
+                            Clear
+                            <span class="ps-2 material-symbols-outlined">clear_all</span>
+                        </button>
+                    </div>            
                 </div>
             </div>
         </form>

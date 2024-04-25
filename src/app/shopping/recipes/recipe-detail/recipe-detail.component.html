@@ -12,14 +12,14 @@
     <div class="col-sm-12">
         <div class="dropdown" style="display: inline-block;" appDropdown>
             <button class="btn btn-secondary dropdown-toggle" type="button">
-              Manage recipe
+                Manage recipe
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">To shopping list</a></li>
-              <li><a class="dropdown-item" href="#">Edit recipe</a></li>
-              <li><a class="dropdown-item" href="#">Delete recipe</a></li>
+                <li><a class="dropdown-item" href="#" (click)="onClickToShoppingList()">To shopping list</a></li>
+                <li><a class="dropdown-item" href="#">Edit recipe</a></li>
+                <li><a class="dropdown-item" href="#">Delete recipe</a></li>
             </ul>
-          </div>
+        </div>
     </div>
 </div>
 <div class="row">
@@ -29,6 +29,15 @@
 </div>
 <div class="row">
     <div class="col-sm-12">
-        Ingredients        
+        <h5>Ingredients:</h5>
+        <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center"
+                *ngFor="let ingredient of recipe.ingredients">
+                {{ ingredient.name }}
+                <span class="badge text-bg-primary rounded-pill">
+                    {{ ingredient.amount }}
+                </span>
+            </li>
+        </ul>
     </div>
 </div>

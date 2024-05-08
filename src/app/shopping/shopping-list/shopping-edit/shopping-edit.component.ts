@@ -31,10 +31,13 @@ export class ShoppingEditComponent {
   onAddItem() {
     const ingredient = new Ingredient(
       this.nameInput.nativeElement.value,
-      this.amountInput.nativeElement.value
+      parseInt(this.amountInput.nativeElement.value)
     );
-    this.shoppingListService.addIngredient(ingredient);
-    console.log(this.shoppingListService.getIngredients());
+    
+    if (ingredient.name && ingredient.amount > 0) {
+      this.shoppingListService.addIngredient(ingredient);
+      // console.log(this.shoppingListService.getIngredients());
+    }    
   }
 
 }

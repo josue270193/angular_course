@@ -1,12 +1,15 @@
 import { Component, OnInit } from "@angular/core";
 import { AccountDto } from "../account.model";
 import { AccountService } from "../shared/account.service";
+import { CommonModule } from "@angular/common";
 
 @Component({
     selector: 'app-new-account',
-    templateUrl: './app-new-account.component.html'
+    templateUrl: './app-new-account.component.html',
+    standalone: true,
+    imports: [CommonModule]
 })
-export class AppNewAccount implements OnInit {
+export class AppNewAccountComponent implements OnInit {
 
     constructor(private accountService: AccountService) {
 

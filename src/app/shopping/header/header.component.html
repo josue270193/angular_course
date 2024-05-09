@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg border-bottom border-body" style="background-color: #e3f2fd;">
     <div class="container-fluid">
-        <a href="#" class="navbar-brand">Recipe Book</a>
+        <a class="navbar-brand">Recipe Book</a>
         <button class="navbar-toggler" type="button"             
             aria-controls="navbarHeaderContent" [attr.aria-expanded]="!collapsed" aria-label="Toggle navigation"
             (click)="collapsed = !collapsed">
@@ -9,10 +9,10 @@
         <div class="collapse navbar-collapse" id="navbarHeaderContent" [class.collapse]="collapsed">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a href="#" class="nav-link active" (click)="goToRecipes()">Recipes</a>
+                    <a class="nav-link active" (click)="goToRecipes()">Recipes</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link active" (click)="goToShoppingList()">Shopping List</a>
+                    <a class="nav-link active" (click)="goToShoppingList()">Shopping List</a>
                 </li>
                 
             </ul>
@@ -23,13 +23,13 @@
                     </button>
                     <ul class="dropdown-menu">                                        
                         <li>
-                            <a href="#" class="dropdown-item">
+                            <a class="dropdown-item">
                                 Save Data
                             </a>
                         </li>
                         <li><hr class="dropdown-divider"></li>
                         <li>
-                            <a href="#" class="dropdown-item">
+                            <a class="dropdown-item">
                                 Fetch Data
                             </a>
                         </li>

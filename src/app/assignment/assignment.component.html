@@ -1,0 +1,25 @@
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+    </li>
+</ul>
+
+<div>                                
+    <app-game-control (onTick)="onTick($event)"/>
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let number of numbers">
+            <odd-number *ngIf="number % 2 !== 0">{{number}}</odd-number>
+            <even-number *ngIf="number % 2 === 0">{{number}}</even-number>
+        </li>                    
+    </ul>
+</div>
+
+<div>                                
+    <list-user-app />
+</div>

@@ -1,9 +1,12 @@
+import { CommonModule } from '@angular/common';
 import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, ElementRef, Input, OnChanges, OnDestroy, OnInit, SimpleChanges, ViewChild, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-server-element',
   templateUrl: './server-element.component.html',
-  styleUrls: ['./server-element.component.css']
+  styleUrls: ['./server-element.component.css'],
+  standalone: true,
+  imports: [CommonModule]
 })
 export class ServerElementComponent 
 // implements OnInit, OnChanges, DoCheck, 

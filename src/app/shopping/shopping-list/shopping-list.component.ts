@@ -1,11 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Ingredient } from '../shared/ingredient.model';
 import { ShoppingListService } from './shopping-list.service';
+import { CommonModule } from '@angular/common';
+import { ShoppingEditComponent } from './shopping-edit/shopping-edit.component';
 
 @Component({
   selector: 'app-shopping-list',
   templateUrl: './shopping-list.component.html',
-  styleUrls: ['./shopping-list.component.css']
+  styleUrls: ['./shopping-list.component.css'],
+  standalone: true,
+  imports: [CommonModule, ShoppingEditComponent]
 })
 export class ShoppingListComponent implements OnInit {
 

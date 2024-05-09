@@ -1,12 +1,13 @@
 import { CommonModule } from "@angular/common";
 import { Component, OnInit } from "@angular/core";
 import { UserService } from "../shared/user.service";
+import { RouterModule } from "@angular/router";
 
 @Component({
     selector: 'active-user-app',
     templateUrl: './active-user.component.html',
     standalone: true,
-    imports: [CommonModule]
+    imports: [CommonModule, RouterModule]
 })
 export class ActiveUserComponent implements OnInit {
     

@@ -1,12 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { AccountDto } from '../account.model';
-import { LoggingService } from 'src/app/shopping/shared/logging.service';
 import { AccountService } from '../shared/account.service';
+import { CommonModule } from '@angular/common';
+import { AppDetailAccountComponent } from '../app-detail-account/app-detail-account.component';
+import { AppNewAccountComponent } from '../app-new-account/app-new-account.component';
 
 @Component({
   selector: 'app-accounts',
   templateUrl: './app-accounts.component.html',
-  styleUrl: './app-accounts.component.css'
+  styleUrl: './app-accounts.component.css',
+  standalone: true,
+  imports: [
+    CommonModule,
+    AppDetailAccountComponent,
+    AppNewAccountComponent
+  ]
 })
 export class AppAccountsComponent implements OnInit {
 

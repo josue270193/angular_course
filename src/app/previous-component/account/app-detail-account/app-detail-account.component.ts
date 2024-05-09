@@ -1,12 +1,15 @@
 import { Component, ElementRef, EventEmitter, Input, OnChanges, OnInit, Output, Renderer2, SimpleChanges, ViewChild } from "@angular/core";
 import { AccountDto } from "../account.model";
 import { AccountService } from "../shared/account.service";
+import { CommonModule } from "@angular/common";
 
 @Component({
     selector: 'app-detail-account',
-    templateUrl: './app-detail-account.component.html'
+    templateUrl: './app-detail-account.component.html',
+    standalone: true,
+    imports: [CommonModule]
 })
-export class AppDetailAccount implements OnInit, OnChanges {
+export class AppDetailAccountComponent implements OnInit, OnChanges {
 
     @Input() account: AccountDto;
     @Input() id: number;

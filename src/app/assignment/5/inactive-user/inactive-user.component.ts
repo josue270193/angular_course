@@ -1,12 +1,13 @@
 import { CommonModule } from "@angular/common";
 import { Component, OnInit } from "@angular/core";
 import { UserService } from "../shared/user.service";
+import { RouterModule } from "@angular/router";
 
 @Component({
     selector: 'inactive-user-app',
     templateUrl: './inactive-user.component.html',
     standalone: true,
-    imports: [CommonModule]
+    imports: [CommonModule, RouterModule]
 })
 export class InactiveUserComponent implements OnInit {
     

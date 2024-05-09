@@ -1,11 +1,14 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'log-user-detail',
     templateUrl: './log-user-detail.component.html',
-    styleUrls: ['./log-user-detail.component.css']
+    styleUrls: ['./log-user-detail.component.css'],
+    standalone: true,
+    imports: [CommonModule]
 })
-export class LogUserDetail implements OnInit {
+export class LogUserDetailComponent implements OnInit {
 
     isDisplayDetail = false;
     clickLog = [];

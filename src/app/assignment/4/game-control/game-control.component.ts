@@ -1,10 +1,12 @@
 import { Component, EventEmitter, OnInit, Output } from "@angular/core";
 import { TimerTick } from "../shared/time.model";
-
+import { CommonModule } from "@angular/common";
 
 @Component({
     selector: 'app-game-control',
-    templateUrl: './game-control.component.html'
+    templateUrl: './game-control.component.html',
+    standalone: true,
+    imports: [CommonModule]
 })
 export class GameControlComponent implements OnInit {
 
@@ -13,10 +15,10 @@ export class GameControlComponent implements OnInit {
     @Output('onTick')
     timerEvent = new EventEmitter<TimerTick>();    
 
-    count = 0;
+    public count: number;
 
     constructor() {
-        
+        this.count = 0
     }
 
     ngOnInit(): void {

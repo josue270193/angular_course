@@ -1,10 +1,17 @@
 import { Component, EventEmitter, Output } from "@angular/core";
 import { RouteEvent } from "../shared/route-event.model";
+import { CommonModule } from "@angular/common";
+import { DropdownDirective } from "../shared/dropdown.directive";
 
 @Component({
     selector: 'app-header',
     templateUrl: './header.component.html',
-    styleUrls: ['./header.component.css']
+    styleUrls: ['./header.component.css'],
+    standalone: true,
+    imports: [
+        CommonModule,
+        DropdownDirective
+    ]
 })
 export class HeaderComponent {
 
@@ -13,7 +20,6 @@ export class HeaderComponent {
 
     collapsed = true;
     // dropdownCollapsed = false;
-
 
     constructor() {
 

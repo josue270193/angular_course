@@ -1,9 +1,18 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { CockpitComponent } from './cockpit/cockpit.component';
+import { ServerElementComponent } from './server-element/server-element.component';
 
 @Component({
   selector: 'app-databinding',
   templateUrl: './databinding.component.html',
-  styleUrls: ['./databinding.component.css']
+  styleUrls: ['./databinding.component.css'],
+  standalone: true,
+  imports: [
+    CommonModule,
+    CockpitComponent,
+    ServerElementComponent
+  ]
 })
 export class DatabindingComponent {
 

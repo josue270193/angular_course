@@ -1,9 +1,10 @@
 import { Directive, ElementRef, HostBinding, HostListener, Input, OnInit, Renderer2, RendererStyleFlags2 } from "@angular/core";
 
 @Directive({
-    selector: '[appBetterHighlight]'
+    selector: '[appBetterHighlight]',
+    standalone: true
 })
-export class BetterHighlight implements OnInit {
+export class BetterHighlightDirective implements OnInit {
 
     @Input() defaultColor: string = 'transparent'
     @Input('appBetterHighlight') highlightColor: string = 'blue'

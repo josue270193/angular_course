@@ -1,8 +1,19 @@
+import { CommonModule } from "@angular/common";
 import { Component, OnInit } from "@angular/core";
+import { BasicHighlightDirective } from "./basic-highlight/basic-hightight.directive";
+import { BetterHighlightDirective } from "./better-highlight/better-highlight.directive";
+import { UnlessDirective } from "./unless/unless.directive";
 
 @Component({
     selector: 'odd-list',
-    templateUrl: './odd-list.component.html'
+    templateUrl: './odd-list.component.html',
+    standalone: true,
+    imports: [
+        CommonModule,
+        BasicHighlightDirective,
+        BetterHighlightDirective,
+        UnlessDirective
+    ]
 }) 
 export class OddListComponent implements OnInit {
     

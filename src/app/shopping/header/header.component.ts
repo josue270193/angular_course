@@ -1,7 +1,7 @@
-import { Component, EventEmitter, Output } from "@angular/core";
-import { RouteEvent } from "../shared/route-event.model";
+import { Component } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { DropdownDirective } from "../shared/dropdown.directive";
+import { Router, RouterModule } from "@angular/router";
 
 @Component({
     selector: 'app-header',
@@ -10,28 +10,20 @@ import { DropdownDirective } from "../shared/dropdown.directive";
     standalone: true,
     imports: [
         CommonModule,
-        DropdownDirective
+        DropdownDirective,
+        RouterModule
     ]
 })
 export class HeaderComponent {
 
-    @Output()
-    goToEvent = new EventEmitter<RouteEvent>();
-
     collapsed = true;
     // dropdownCollapsed = false;
 
-    constructor() {
+    constructor(private router: Router) {
 
     }
 
-    goToShoppingList() {
-        var event = new RouteEvent("shopping-list");
-        this.goToEvent.emit(event);
-    }
-
-    goToRecipes() {
-        var event = new RouteEvent("recipes");
-        this.goToEvent.emit(event);
+    goToAssignment() {
+        this.router.navigate(["/assignment"]);
     }
 }

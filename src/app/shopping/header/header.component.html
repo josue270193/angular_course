@@ -1,41 +1,54 @@
-<nav class="navbar navbar-expand-lg border-bottom border-body" style="background-color: #e3f2fd;">
+<nav class="navbar navbar-expand-lg border-bottom bg-body-tertiary" style="background-color: #e3f2fd;">
     <div class="container-fluid">
         <a class="navbar-brand">Recipe Book</a>
-        <button class="navbar-toggler" type="button"             
-            aria-controls="navbarHeaderContent" [attr.aria-expanded]="!collapsed" aria-label="Toggle navigation"
-            (click)="collapsed = !collapsed">
+        <button class="navbar-toggler" type="button" aria-controls="navbarHeaderContent"
+            [attr.aria-expanded]="!collapsed" aria-label="Toggle navigation" (click)="collapsed = !collapsed">
             <span class="navbar-toggler-icon"></span>
-        </button>      
+        </button>
         <div class="collapse navbar-collapse" id="navbarHeaderContent" [class.collapse]="collapsed">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" (click)="goToRecipes()">Recipes</a>
+                    <a class="nav-link cursor-pointer" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                        [routerLink]="['./recipes']">
+                        Recipes
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" (click)="goToShoppingList()">Shopping List</a>
+                    <a class="nav-link cursor-pointer" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                        [routerLink]="['./shopping/list']">
+                        Shopping List
+                    </a>
                 </li>
-                
             </ul>
-            <ul class="navbar-nav">
+            <ul class="navbar-nav d-flex">
                 <li class="nav-item dropdown" appDropdown>
-                    <button class="nav-link dropdown-toggle" type="button">
-                        Manage
-                    </button>
-                    <ul class="dropdown-menu">                                        
+                    <a class="nav-link dropdown-toggle" [routerLink]="['.']" role="button" aria-expanded="false">
+                        Manage large than normal button for testing
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-lg-end">
                         <li>
-                            <a class="dropdown-item">
+                            <a class="dropdown-item" [routerLink]="['.']">
                                 Save Data
                             </a>
                         </li>
-                        <li><hr class="dropdown-divider"></li>
                         <li>
-                            <a class="dropdown-item">
+                            <a class="dropdown-item" [routerLink]="['.']">
                                 Fetch Data
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <a class="dropdown-item" [routerLink]="['.']" (click)="goToAssignment()">
+                                Go to Assignment
                             </a>
                         </li>
                     </ul>
                 </li>
-            </ul>            
+            </ul>
+
         </div>
     </div>
 </nav>

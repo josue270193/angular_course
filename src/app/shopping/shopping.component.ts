@@ -1,9 +1,9 @@
 import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
-import { RouteEvent } from "./shared/route-event.model";
 import { HeaderComponent } from "./header/header.component";
 import { RecipesComponent } from "./recipes/recipes.component";
 import { ShoppingListComponent } from "./shopping-list/shopping-list.component";
+import { RouterModule } from "@angular/router";
 
 @Component({
     selector: 'shopping',
@@ -11,6 +11,7 @@ import { ShoppingListComponent } from "./shopping-list/shopping-list.component";
     standalone: true,    
     imports: [
       CommonModule, 
+      RouterModule,
       HeaderComponent,
       RecipesComponent,
       ShoppingListComponent
@@ -18,14 +19,8 @@ import { ShoppingListComponent } from "./shopping-list/shopping-list.component";
 })
 export class ShoppingComponent {
 
-    displayView = "recipes";  
-
     constructor() {
   
-    }
-  
-    showView(event: RouteEvent) {
-      this.displayView = event.show;
     }
   
 }

@@ -1,5 +1,4 @@
 <div>
-    <app-header (goToEvent)="showView($event)" />
-    <app-recipes *ngIf="displayView === 'recipes'" />
-    <app-shopping-list *ngIf="displayView === 'shopping-list'" />
+    <app-header />
+    <router-outlet />
 </div>

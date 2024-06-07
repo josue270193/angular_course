@@ -15,9 +15,9 @@
                 Manage recipe
             </button>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" (click)="onClickToShoppingList()">To shopping list</a></li>
-                <li><a class="dropdown-item">Edit recipe</a></li>
-                <li><a class="dropdown-item">Delete recipe</a></li>
+                <li><a class="dropdown-item" [routerLink]="['.']" (click)="onClickToShoppingList()">To shopping list</a></li>
+                <li><a class="dropdown-item" [routerLink]="['edit']" >Edit recipe</a></li>
+                <li><a class="dropdown-item" [routerLink]="['.']" >Delete recipe</a></li>
             </ul>
         </div>
     </div>

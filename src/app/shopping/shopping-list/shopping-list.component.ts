@@ -3,13 +3,18 @@ import { Ingredient } from '../shared/ingredient.model';
 import { ShoppingListService } from './shopping-list.service';
 import { CommonModule } from '@angular/common';
 import { ShoppingEditComponent } from './shopping-edit/shopping-edit.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-shopping-list',
   templateUrl: './shopping-list.component.html',
   styleUrls: ['./shopping-list.component.css'],
   standalone: true,
-  imports: [CommonModule, ShoppingEditComponent]
+  imports: [
+    CommonModule,
+    ShoppingEditComponent,
+    RouterModule
+  ]
 })
 export class ShoppingListComponent implements OnInit {
 

@@ -4,6 +4,8 @@ import { RecipeService } from './recipe.service';
 import { CommonModule } from '@angular/common';
 import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
+import { RouterModule } from '@angular/router';
+import { RecipeEditComponent } from './recipe-edit/recipe-edit.component';
 
 @Component({
   selector: 'app-recipes',
@@ -13,8 +15,10 @@ import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
   standalone: true,
   imports: [
     CommonModule,
+    RouterModule,
     RecipeListComponent,
-    RecipeDetailComponent
+    RecipeDetailComponent,
+    RecipeEditComponent
   ]
 })
 export class RecipesComponent implements OnInit {
@@ -26,10 +30,7 @@ export class RecipesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.recipeService.recipeSelected
-      .subscribe((recipe: Recipe) => {
-        this.recipeSelected = recipe;
-      });
+    
   }
 
 }

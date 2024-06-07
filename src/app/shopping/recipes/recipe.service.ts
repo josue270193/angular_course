@@ -8,6 +8,7 @@ export class RecipeService {
 
     private recipes = [
         new Recipe(
+            1,
             "Spaghetti1",
             "Recipe for spaghetti1",
             "https://thefastrecipe.com/wp-content/uploads/2021/04/fried-spaghetti-4.jpg",
@@ -18,6 +19,7 @@ export class RecipeService {
             ]
         ),
         new Recipe(
+            2,
             "Spaghetti2",
             "Recipe for spaghetti2",
             "https://thefastrecipe.com/wp-content/uploads/2021/04/fried-spaghetti-4.jpg",
@@ -27,6 +29,7 @@ export class RecipeService {
             ]
         ),
         new Recipe(
+            3,
             "Spaghetti3",
             "Recipe for spaghetti3",
             "https://thefastrecipe.com/wp-content/uploads/2021/04/fried-spaghetti-4.jpg",
@@ -35,9 +38,7 @@ export class RecipeService {
                 new Ingredient('Onion', 1),
             ]
         )
-    ]
-
-    recipeSelected = new EventEmitter<Recipe>();
+    ]    
 
     constructor(private shoppingListService: ShoppingListService) {
 
@@ -45,6 +46,10 @@ export class RecipeService {
 
     public getRecipes() {
         return this.recipes.slice();
+    }
+
+    public getRecipeById(id: number) {                
+        return this.recipes.filter(item => item.id === id)[0] ?? null;
     }
 
     public addIngredientsToShoppingList(recipe: Recipe) {

@@ -1,19 +1,37 @@
 import { Ingredient } from "../shared/ingredient.model";
 
 export class Recipe {
-
+    
+    private _id: number;
     private _name: string;
     private _description: string;
     private _imagePath: string;
     private _ingredients: Ingredient[];
 
-    constructor(name: string, description: string, imagePath: string, ingredients: Ingredient[]) {
+	constructor(id: number, name: string, description: string, imagePath: string, ingredients: Ingredient[]) {
+        this._id = id;
         this._name = name;
         this._description = description;
         this._imagePath = imagePath;
         this._ingredients = ingredients;
     }
 
+    /**
+     * Getter id
+     * @return {number}
+     */
+	public get id(): number {
+		return this._id;
+	}
+
+    /**
+     * Setter id
+     * @param {number} value
+     */
+	public set id(value: number) {
+		this._id = value;
+	}
+	
     /**
      * Getter name
      * @return {string}
